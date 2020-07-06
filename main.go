@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gin-app/authn"
+	authn "github.com/dadrus/gin-authn"
 	"github.com/gin-gonic/gin"
 )
 
@@ -12,7 +12,7 @@ func main() {
 	router.Static("/assets", "./assets")
 
 	router.LoadHTMLGlob("templates/*")
-	router.Use(authn.OAuth2Aware(false))
+	router.Use(authn.OAuth2Aware())
 
 	initRoutes()
 
