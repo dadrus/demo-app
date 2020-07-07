@@ -9,9 +9,8 @@ var router *gin.Engine
 
 func main() {
 	router = gin.Default()
-	router.Static("/assets", "./assets")
 
-	router.LoadHTMLGlob("templates/*")
+	router.LoadHTMLGlob("web/templates/*")
 	router.Use(authn.OAuth2Aware())
 
 	initRoutes()
