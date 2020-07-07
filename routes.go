@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gin-app/handlers"
+	"demo-app/handlers"
 	"github.com/gin-gonic/gin"
 )
 
