@@ -1,7 +1,7 @@
 package handlers
 
 import (
-	"gin-app/models"
+	"demo-app/models"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -23,18 +23,6 @@ func render(c *gin.Context, data gin.H, templateName string) {
 		// Respond with HTML
 		c.HTML(http.StatusOK, templateName, data)
 	}
-}
-
-func ShowLoginPage(c *gin.Context) {
-	render(c,
-		gin.H{
-			"title": "Login"},
-		"login.html")
-}
-
-func Login(c *gin.Context) {
-	c.Header("Authorization", "Bearer foo")
-	c.Redirect(303, "/")
 }
 
 func ShowIndexPage(c *gin.Context) {
