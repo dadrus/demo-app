@@ -44,6 +44,7 @@ WORKDIR /opt/demo-app
 USER appuser:appuser
 
 ENV GIN_MODE=release
+ENV PORT 8082
 
-EXPOSE 8080
+EXPOSE $PORT
 ENTRYPOINT ["/opt/demo-app/demo-app"]
