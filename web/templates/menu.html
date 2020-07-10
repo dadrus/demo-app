@@ -25,11 +25,11 @@
                 <div class="dropdown-menu">
                     <a class="dropdown-item" href="{{ .user.profile }}">Profile</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="http://127.0.0.1:8081/logout">Logout</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
                 </div>
             </div>
         {{ else }}
-            <a class="btn btn-outline-primary ml-auto" href="http://127.0.0.1:8081/login">Login</a>
+            <a class="btn btn-outline-primary ml-auto" href="/login">Login</a>
         {{ end }}
     </div>
 </nav>
